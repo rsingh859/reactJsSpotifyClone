@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import DataLayer from './DataLayer';
+import { DataLayer } from './DataLayer';
 import reportWebVitals from './reportWebVitals';
+import reducer, {initialState} from './reducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DataLayer initialState reducer>
+    <DataLayer initialState={initialState} reducer={reducer}>
       <App />
     </DataLayer>
   </React.StrictMode>,
